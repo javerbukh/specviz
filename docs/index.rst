@@ -26,3 +26,4 @@ Using SpecViz
    getting-started
    unit_conversion
    arithmetic-layer
+   stats_sidebar.rst
