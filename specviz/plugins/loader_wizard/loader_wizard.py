@@ -322,6 +322,9 @@ class BaseImportWizard(QDialog):
         self.ui.combo_uncertainty_type.addItem('Standard Deviation', userData='std')
         self.ui.combo_uncertainty_type.addItem('Inverse Variance', userData='ivar')
 
+        # Set the astropy.table.Table.read() comboBox and other ui elements
+        self.ui.line_table_read.text()
+
         pg.setConfigOption('foreground', 'k')
 
         self.plot_widget = pg.PlotWidget(title="Spectrum preview",
