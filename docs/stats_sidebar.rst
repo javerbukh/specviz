@@ -1,3 +1,5 @@
+.. _specviz-stats_sidebar:
+
 Right Sidebar Statistics Display
 --------------------------------
 
