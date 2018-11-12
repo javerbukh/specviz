@@ -1,5 +1,5 @@
 import os
-import logging
+import # logging
 import numpy as np
 
 from astropy import units as u
@@ -61,37 +61,37 @@ def compute_stats(spectrum):
     try:
         cent = centroid(spectrum, region=None) # we may want to adjust this for continuum subtraction
     except Exception as e:
-        logging.error(e)
+        # logging.error(e)
         cent = "Error"
 
     try:
         rms = np.sqrt(spectrum.flux.dot(spectrum.flux) / len(spectrum.flux))
     except Exception as e:
-        logging.error(e)
+        # logging.error(e)
         rms = "Error"
 
     try:
         snr_val = snr(spectrum)
     except Exception as e:
-        logging.error(e)
+        # logging.error(e)
         snr_val = "N/A"
 
     try:
         fwhm_val = fwhm(spectrum)
     except Exception as e:
-        logging.error(e)
+        # logging.error(e)
         fwhm_val = "Error"
 
     try:
         ew = equivalent_width(spectrum)
     except Exception as e:
-        logging.error(e)
+        # logging.error(e)
         ew = "Error"
 
     try:
         total = line_flux(spectrum)
     except Exception as e:
-        logging.error(e)
+        # logging.error(e)
         total = "Error"
 
     return {'mean': spectrum.flux.mean(),
